@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes_Project
 {
-    class Sweepstakes
+    public class Sweepstakes
     {
         Dictionary<int, Contestant> dictionary;
         private string name;
@@ -22,7 +22,6 @@ namespace Sweepstakes_Project
             name = null;
             random = new Random();
         }
-
         public void SweepstakesMenu()
         {
             string input = UserInterface.SweepstakeMenuOptions();
@@ -43,20 +42,19 @@ namespace Sweepstakes_Project
                     break;
             }
         }
-
         public void AddContestantMenu()
         {
             CreateContestant();
 
             string input = UserInterface.AddMoreContestants();
 
-            if (input.ToLower().Trim() == "y")
+            if (input.ToLower().Trim() == "Y")
             {
-                while (input.ToLower().Trim() == "y")
+                while (input.ToLower().Trim() == "Y")
                 {
                     CreateContestant();
                     input = UserInterface.AddMoreContestants();
-                    if (input.ToLower().Trim() == "n")
+                    if (input.ToLower().Trim() == "N")
                     {
                         SweepstakesMenu();
                     }

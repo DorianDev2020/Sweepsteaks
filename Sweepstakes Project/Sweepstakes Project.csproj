@@ -45,9 +45,13 @@
   <ItemGroup>
     <Compile Include="Contestant.cs" />
     <Compile Include="ISweepstakesManager.cs" />
+    <Compile Include="Marketing Firm.cs" />
+    <Compile Include="MarketingFirm.cs" />
+    <Compile Include="Object Factory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueueManager.cs" />
+    <Compile Include="StackManager.cs" />
     <Compile Include="Sweepstakes.cs" />
     <Compile Include="UserInterface.cs" />
   </ItemGroup>

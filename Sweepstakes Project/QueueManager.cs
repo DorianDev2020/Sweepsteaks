@@ -28,6 +28,11 @@ namespace Sweepstakes_Project
         {
             Queue.Enqueue(sweepstakes);
         }
+
+        public Sweepstakes Sweepstakes()
+        {
+            throw new NotImplementedException();
+        }
     }
 
    

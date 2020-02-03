@@ -55,15 +55,15 @@ namespace Sweepstakes_Project
 
         public static string ChooseManagmentTool()
         {
-            Console.WriteLine("Welcome To The Sweepstakes Application Manager.");
-            Console.WriteLine("Which Sweepstakes Mangment You'd Perfer To Use.");
+            Console.WriteLine(" Welcome To The Sweepstakes Application Manager.");
+            Console.WriteLine(" Select The Sweepstakes Mangment You'd Perfer To Use.");
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("Input [Q] for a Queue Manger.");
+            Console.WriteLine(" Input [Q] for a Queue Manger.");
             Console.WriteLine("");
-            Console.WriteLine("Or");
+            Console.WriteLine(" Or");
             Console.WriteLine("");
-            Console.WriteLine("Input [S] for a Stack Manager.");
+            Console.WriteLine(" Input [S] for a Stack Manager.");
             Console.WriteLine("");
             string input = Console.ReadLine();
             Console.Clear();
@@ -80,9 +80,9 @@ namespace Sweepstakes_Project
 
         public static string MakeMoreSweepstakes()
         {
-            Console.WriteLine("'Sweepstake was succesfully added!'");
+            Console.WriteLine("'Sweepstake Has Been Succesfully Added!'");
             Console.WriteLine("");
-            Console.WriteLine("Do you want to make another sweepstake?");
+            Console.WriteLine("Do You Want To Make Another Sweepstake?");
             Console.WriteLine("");
             Console.WriteLine("Input [Y] for yes.");
             Console.WriteLine("");
@@ -97,8 +97,8 @@ namespace Sweepstakes_Project
         public static void GoToSweepstakesMenu()
         {
             Console.WriteLine(" Add Contestants,");
-            Console.WriteLine("its not a Sweepstake without any contestants!");
-            Console.WriteLine("Press [ENTER] to continue.");
+            Console.WriteLine("Its Not A Sweepstake Without Any Contestants!");
+            Console.WriteLine("Press [ENTER] To Continue.");
             Console.ReadLine();
             Console.Clear();
         }
