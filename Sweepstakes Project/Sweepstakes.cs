@@ -22,6 +22,52 @@ namespace Sweepstakes_Project
             name = null;
             random = new Random();
         }
+
+        public void SweepstakesMenu()
+        {
+            string input = UserInterface.SweepstakeMenuOptions();
+
+            switch (input)
+            {
+                case "1":
+                    AddContestantMenu();
+                    break;
+                case "2":
+                    RetreiveContestant();
+                    break;
+                case "3":
+                    PrintDictionary();
+                    break;
+                case "4":
+                    StartSweepstake();
+                    break;
+            }
+        }
+
+        public void AddContestantMenu()
+        {
+            CreateContestant();
+
+            string input = UserInterface.AddMoreContestants();
+
+            if (input.ToLower().Trim() == "y")
+            {
+                while (input.ToLower().Trim() == "y")
+                {
+                    CreateContestant();
+                    input = UserInterface.AddMoreContestants();
+                    if (input.ToLower().Trim() == "n")
+                    {
+                        SweepstakesMenu();
+                    }
+                }
+            }
+            else
+            {
+                throw new ApplicationException("That Input Was Not Valid!");
+            }
+        }
+
         private void RegisterContestant(Contestant contestant)
         {
             RegistrationNumber = dictionary.Count();
@@ -34,6 +80,45 @@ namespace Sweepstakes_Project
             RegisterContestant(contestant);
             Console.Clear();
         }
+
+        private void PrintContestantInfo(Contestant contestant)
+        {
+            Console.WriteLine(" First Name: {0} \n Last Name: {1} \n Email: {2} ", contestant.FirstName, contestant.LastName, contestant.Email);
+            Console.ReadLine();
+        }
+
+        private void RetreiveContestant()
+        {
+            int input = Convert.ToInt32(Console.ReadLine());
+            bool person = dictionary.TryGetValue(input - 1, out Contestant contestant);
+
+            if (person == true)
+            {
+                PrintContestantInfo(contestant);
+            }
+            else if (person == false)
+            {
+                Console.WriteLine("No Contestants With That Registraiton Number Were Found, Please Try Again!");
+                SweepstakesMenu();
+            }
+        }
+
+        private void PrintDictionary()
+        {
+            foreach (KeyValuePair<int, Contestant> contastant in dictionary)
+            {
+                Console.WriteLine("Registration Number: {0}, \n First Name: {1} \n Last Name: {2} \n Email: {3}", contastant.Key, contastant.Value.FirstName, contastant.Value.LastName, contastant.Value.Email);
+                Console.ReadLine();
+            }
+        }
+
+        private void StartSweepstake()
+        {
+            string winner = PickWinner();
+            Console.WriteLine(winner + " Is The Winner Of The Sweepstakes!");
+            Console.ReadLine();
+        }
+
         private string PickWinner()
         {
             int winningContestant;
@@ -48,7 +133,7 @@ namespace Sweepstakes_Project
                     return name;
                 }
             }
-            throw new ApplicationException("If you're seeing this....It's my fault sorry...");
+            throw new ApplicationException(" Sorry...");
         }
     }
 }

@@ -34,4 +34,96 @@ namespace Sweepstakes_Project
 
             return emailInput;
         }
+        public static string SweepstakeMenuOptions()
+        {
+            Console.WriteLine("Press [1] to Register a Contestant.");
+            Console.WriteLine("Press [2] to Retrieve a Specific Contestant's Info.");
+            Console.WriteLine("Press [3] to Display All Contestants Registered.");
+            Console.WriteLine("Press [4] to Start The Sweepstakes.");
+            string input = Console.ReadLine();
+            Console.Clear();
+            return input;
+        }
+
+        public static string CreateSweepstakes()
+        {
+            Console.WriteLine("What Is The Name Of The Sweepstake?");
+            string sweepstake = Console.ReadLine();
+            Console.Clear();
+            return sweepstake;
+        }
+
+        public static string ChooseManagmentTool()
+        {
+            Console.WriteLine("Welcome To The Sweepstakes Application Manager.");
+            Console.WriteLine("Which Sweepstakes Mangment You'd Perfer To Use.");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("Input [Q] for a Queue Manger.");
+            Console.WriteLine("");
+            Console.WriteLine("Or");
+            Console.WriteLine("");
+            Console.WriteLine("Input [S] for a Stack Manager.");
+            Console.WriteLine("");
+            string input = Console.ReadLine();
+            Console.Clear();
+            return input;
+        }
+
+        public static void SweepstakesGoToCreator()
+        {
+            Console.WriteLine("Now that we have a sweepstake manager lets create some sweepstakes!");
+            Console.WriteLine("Press [ENTER] to start creating your sweepstakes!");
+            Console.ReadLine();
+            Console.Clear();
+        }
+
+        public static string MakeMoreSweepstakes()
+        {
+            Console.WriteLine("'Sweepstake was succesfully added!'");
+            Console.WriteLine("");
+            Console.WriteLine("Do you want to make another sweepstake?");
+            Console.WriteLine("");
+            Console.WriteLine("Input [Y] for yes.");
+            Console.WriteLine("");
+            Console.WriteLine("Or");
+            Console.WriteLine("");
+            Console.WriteLine("Input [N] for no.");
+            string input = Console.ReadLine();
+            Console.Clear();
+            return input;
+        }
+
+        public static void GoToSweepstakesMenu()
+        {
+            Console.WriteLine(" Add Contestants,");
+            Console.WriteLine("its not a Sweepstake without any contestants!");
+            Console.WriteLine("Press [ENTER] to continue.");
+            Console.ReadLine();
+            Console.Clear();
+        }
+
+        public static string AddMoreContestants()
+        {
+            Console.WriteLine("'Contestant Was Added Successfully!'");
+            Console.WriteLine("");
+            Console.WriteLine(" Add Another Contestant?");
+            Console.WriteLine("");
+            Console.WriteLine("Input [Y] for yes.");
+            Console.WriteLine("");
+            Console.WriteLine("Or");
+            Console.WriteLine("");
+            Console.WriteLine("Input [N] for no.");
+            string input = Console.ReadLine();
+            Console.Clear();
+            return input;
+        }
+
+        public static string ChooseSpecificSweepstake()
+        {
+            Console.WriteLine("What Sweepstake Would You Like To Use?");
+            string input = Console.ReadLine();
+            return input;
+        }
+    }
 }

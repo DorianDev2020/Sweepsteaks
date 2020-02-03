@@ -24,4 +24,5 @@ namespace Sweepstakes_Project
             contestant.email = UserInterface.GetContestantEmail();
             return contestant;
         }
+    }
 }
