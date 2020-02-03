@@ -8,5 +8,11 @@ namespace Sweepstakes
 {
     class Contestant
     {
+        //Member Variables;
+        string Firstname;
+        string Lastname;
+        string Emailaddress;
+        int RegistrationNumber;
     }
+  
 }

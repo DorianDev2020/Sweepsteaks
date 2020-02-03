@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Program
+    class Marketing_Firm
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }
