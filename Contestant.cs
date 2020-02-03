@@ -19,9 +19,9 @@ namespace Sweepstakes
 
         public string Emailaddress { get => emailAddress; set => emailAddress = value;}
 
-        public int //Not Sure How To Go About Entering A Contestant Registration Number.
+        //public int Not Sure How To Go About Entering A Contestant Registration Number.
 
-        public Contestant ContestantInformation()
+        public  Contestant ContestantInformation()
         {
             var contestant = new Contestant();
             contestant.firstName = UI.GetContestantFirstName();
