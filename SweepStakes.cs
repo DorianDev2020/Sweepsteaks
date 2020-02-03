@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class SweepStakes : I
+    public class SweepStakes
     {
-        private static Dictionary<int, Contestant> Contestants = new Dictionary<int, Contestant>();
+        Dictionary<int> Contestant Dictionary;
+        private string name;
+        private int registrationNumber;
+        private Random random;
     }
-    public void InsertSweepstakes();
-
-
+   
 }

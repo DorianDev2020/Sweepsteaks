@@ -9,10 +9,27 @@ namespace Sweepstakes
     class Contestant
     {
         //Member Variables;
-        string Firstname;
-        string Lastname;
-        string Emailaddress;
-        int RegistrationNumber;
+        private string firstName;
+        private string lastName;
+        private string emailAddress;
+        private int RegistrationNumber;
+
+        public string Firstname {get => firstName; set => firstName = value;}
+        public string Lastname { get => lastName; set => lastName = value;}
+
+        public string Emailaddress { get => emailAddress; set => emailAddress = value;}
+
+        public int //Not Sure How To Go About Entering A Contestant Registration Number.
+
+        public Contestant ContestantInformation()
+        {
+            var contestant = new Contestant();
+            contestant.firstName = UI.GetContestantFirstName();
+            contestant.lastName = UI.GetContestantLastName();
+            contestant.emailAddress = UI.GetContestantEmailAddress();
+            return contestant;
+        }
+
     }
-  
+   
 }
